@@ -25,17 +25,19 @@ const Home = () => {
   return isLoading === true ? (
     <div>Loading...</div>
   ) : (
-    <div>
+    <div className="bloc-ad">
       {data.offers.map((offer, product_id) => {
         // console.log(offer._id);
         return (
           <Link key={product_id} to={`/offer/${offer._id}`}>
-            <h2>{offer.product_name}</h2>
-            <img
-              style={{ height: "150px" }}
-              src={offer.product_image.secure_url}
-              alt="offer"
-            />
+            <div className="ads">
+              <h2>{offer.product_name}</h2>
+              <img
+                style={{ height: "150px" }}
+                src={offer.product_image.secure_url}
+                alt="offer"
+              />
+            </div>
           </Link>
         );
       })}

@@ -3,11 +3,11 @@ const Header = () => {
     <div className="header">
       <p>Vinted</p>
       <div>
-        <input type="text"></input>
+        <input type="text" placeholder="Recherche des articles"></input>
       </div>
 
-      <button>Connexion</button>
       <button>S'inscrire</button>
+      <button>Se connecter</button>
     </div>
   );
 };

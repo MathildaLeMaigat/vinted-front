@@ -6,7 +6,7 @@
     padding: 20px;
    
 }
-
+/* Offers */
 .bloc-offer{
     display: flex;
     align-items: center;
@@ -20,4 +20,35 @@
 
 .right-bloc{
     border: 2px solid red;
+}
+
+/* Home */
+
+.ads{
+    /* border: 2px solid purple; */
+    /* display: flex; */
+    width: 100%;
+}
+
+.ads img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.bloc-ad{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Sign Up */
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
 }
