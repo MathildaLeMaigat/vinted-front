@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import imageHero from "/Users/mathildalemaigat/LeReacteur/04-React/vinted-front/src/assets/hero.09bfd0f9.jpg";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -25,22 +26,26 @@ const Home = () => {
   return isLoading === true ? (
     <div>Loading...</div>
   ) : (
-    <div className="bloc-ad">
-      {data.offers.map((offer, product_id) => {
-        // console.log(offer._id);
-        return (
-          <Link key={product_id} to={`/offer/${offer._id}`}>
-            <div className="ads">
-              <h2>{offer.product_name}</h2>
-              <img
-                style={{ height: "150px" }}
-                src={offer.product_image.secure_url}
-                alt="offer"
-              />
-            </div>
-          </Link>
-        );
-      })}
+    <div>
+      <div className="hero">
+        <img src={imageHero} alt="hero" />
+      </div>
+      <div className="bloc-ad">
+        {data.offers.map((offer, product_id) => {
+          // console.log(offer._id);
+          return (
+            <Link key={product_id} to={`/offer/${offer._id}`}>
+              <div className="ads">
+                <img src={offer.product_image.secure_url} alt="offer" />
+                <div className="p">
+                  <p>{offer.product_price} €</p>
+                  <p>{offer.product_name}</p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };

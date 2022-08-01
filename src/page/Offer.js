@@ -29,7 +29,6 @@ const Offer = () => {
   ) : (
     <div className="bloc-offer">
       <div className="left-bloc">
-        {" "}
         <img
           style={{ height: "150px" }}
           src={data.product_image.secure_url}

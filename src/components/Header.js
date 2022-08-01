@@ -1,20 +1,45 @@
 import { Link } from "react-router-dom";
+import logo from "/Users/mathildalemaigat/LeReacteur/04-React/vinted-front/src/assets/download.png";
 
-const Header = () => {
+const Header = ({ handleToken, userToken }) => {
   return (
     <div className="header">
-      <p>Vinted</p>
+      <Link to="/">
+        {" "}
+        <img className="logo" src={logo} alt="logo" />
+      </Link>
+
       <div>
         <input type="text" placeholder="Recherche des articles"></input>
       </div>
-      <Link to="/signup">
-        <button>S'inscrire</button>
-      </Link>
-      <Link to="/login">
-        <button>Se connecter</button>
-      </Link>
-
-      <button>Deconnexion</button>
+      {!userToken ? (
+        <>
+          <div className="right-bloc-header">
+            <Link to="/signup">
+              <button className="log">S'inscrire</button>
+            </Link>
+            <Link to="/login">
+              <button className="log">Se connecter</button>
+            </Link>
+            <Link to="/publish">
+              <button className="sell-articles">Vends tes articles</button>
+            </Link>
+          </div>
+        </>
+      ) : (
+        <>
+          <button
+            onClick={() => {
+              handleToken();
+            }}
+          >
+            Deconnexion
+          </button>
+          <Link to="/publish">
+            <button className="sell-articles">Vends tes articles</button>
+          </Link>
+        </>
+      )}
     </div>
   );
 };
