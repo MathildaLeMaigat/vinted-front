@@ -1,0 +1,38 @@
+/* Login */
+
+.login{
+    /* border: black 2px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 60px;
+}
+
+.login input{
+    width: 285px;
+    height: 45px;
+   margin-bottom: 15px;
+   border: none;
+   border-bottom: lightcoral 1px solid;
+   outline: none;
+}
+
+
+
+.login button{
+   text-align: center;
+    width: 295px;
+    height: 45px;
+    margin-top: 25px;
+   margin-bottom: 15px;
+   border: none;
+   background-color: #2EB0BA;
+   color: white;
+   font-size: 15px;
+   border-radius: 5px;
+}
+
+.login button:hover{
+    cursor: pointer;
+}

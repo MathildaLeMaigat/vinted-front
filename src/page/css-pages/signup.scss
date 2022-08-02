@@ -1,0 +1,35 @@
+/* Sign Up */
+
+.top {
+    width: 285px;
+    height: 45px;
+   margin-bottom: 15px;
+   border: none;
+   border-bottom: lightcoral 1px solid;
+}
+
+.newsletter{
+    font-size: 18px;
+    color: lightgrey;
+}
+
+.signup button{
+        text-align: center;
+         width: 295px;
+         height: 45px;
+         margin-top: 25px;
+        margin-bottom: 15px;
+        border: none;
+        background-color: #2EB0BA;
+        color: white;
+        font-size: 15px;
+        border-radius: 5px;
+}
+
+.signup button:hover{
+    cursor: pointer;
+}
+
+.signup input{
+    outline: none;
+}

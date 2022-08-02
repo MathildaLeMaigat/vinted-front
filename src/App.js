@@ -13,6 +13,7 @@ import Publish from "./page/Publish";
 
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
+
   const handleToken = (token) => {
     if (token) {
       Cookies.set("userToken", token, { expires: 7 });
@@ -35,7 +36,7 @@ function App() {
             element={<SignUp handleToken={handleToken} />}
           />
           <Route path="/login" element={<Login handleToken={handleToken} />} />
-          <Route path="/publish" element={<Publish />} />
+          <Route path="/publish" element={<Publish token={userToken} />} />
         </Routes>
       </Router>
     </div>

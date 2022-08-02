@@ -1,3 +1,4 @@
+import "./css-pages/home.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -6,6 +7,8 @@ import imageHero from "/Users/mathildalemaigat/LeReacteur/04-React/vinted-front/
 const Home = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     try {

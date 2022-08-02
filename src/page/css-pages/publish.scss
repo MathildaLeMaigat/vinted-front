@@ -1,0 +1,86 @@
+/* Publish */
+
+.bloc-publish{
+    background-color: #ECEDEE;
+    padding: 10px;
+}
+
+form{
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.publish-img{
+    box-sizing: border-box;
+    /* border: blue 2px solid; */
+    width: 70%;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.publish-img input{
+    /* border: 2px solid orange; */
+    font-size: 15px;
+    border: #2EB0BA 2px solid;
+    background-color: white;
+    padding: 10px;
+}
+
+.bloc-2 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc-2-input{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc-2-input div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid lightgrey;
+}
+
+.bloc-2-input div input{
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+}
+
+.bloc-publish{
+    width: 100%;
+}
+
+.add-button button{
+    background-color: #2EB0BA;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  
+}
+
+.add-button{ 
+   margin-top: 30px;
+    display: flex;
+    justify-content:flex-end
+}
+
+.div-h2{
+    display: flex;
+    justify-content: left;
+    width: 70%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
