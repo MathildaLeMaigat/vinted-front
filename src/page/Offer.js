@@ -3,6 +3,7 @@ import "./css-pages/offer.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Offer = () => {
   const [data, setData] = useState();
@@ -51,7 +52,9 @@ const Offer = () => {
 
           <div className="bottom-part-right">
             <h2>{data.product_name}</h2>
-            <button>Acheter</button>
+            <Link to="/payment">
+              <button>Acheter</button>
+            </Link>
           </div>
         </div>
       </div>
