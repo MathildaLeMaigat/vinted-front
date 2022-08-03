@@ -52,9 +52,13 @@ const Offer = () => {
 
           <div className="bottom-part-right">
             <h2>{data.product_name}</h2>
-            <Link to="/payment">
+            <Link
+              to="/payment"
+              // state={{title: {data.product_name}, price: {data.product_price} }}
+            >
               <button>Acheter</button>
             </Link>
+            ;
           </div>
         </div>
       </div>

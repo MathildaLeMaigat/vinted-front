@@ -2,7 +2,8 @@ import "./css-pages/home.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import imageHero from "/Users/mathildalemaigat/LeReacteur/04-React/vinted-front/src/assets/hero.09bfd0f9.jpg";
+import imageHero from "../assets/hero.09bfd0f9.jpg";
+import tag from "../assets/tear.svg";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -29,7 +30,12 @@ const Home = () => {
   ) : (
     <div>
       <div className="hero">
-        <img src={imageHero} alt="hero" />
+        <img className="img1" src={imageHero} alt="hero" />
+        <img className="img2" src={tag} alt="hero1" />
+        <article className="bloc-hero">
+          <p>Prêts à faire du tri dans vos placards?</p>
+          <button>Vends maintenant</button>
+        </article>
       </div>
       <div className="bloc-ad">
         {data.offers.map((offer, product_id) => {

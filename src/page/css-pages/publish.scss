@@ -5,7 +5,7 @@
     padding: 10px;
 }
 
-form{
+.publish-form{
     /* border: 2px red solid; */
     display: flex;
     flex-direction: column;
@@ -49,13 +49,17 @@ form{
     margin-bottom: 20px;
     background-color: white;
     padding: 20px;
-    border: 1px solid lightgrey;
+}
+
+.bloc-2-input div:not(:last-child){
+    border-bottom: #ECEDEE 1px solid;
 }
 
 .bloc-2-input div input{
     width: 50%;
     border: none;
     border-bottom: 1px solid lightgrey;
+    outline: none;
 }
 
 .bloc-publish{
@@ -83,4 +87,15 @@ form{
     width: 70%;
     margin-bottom: 20px;
     margin-top: 30px;
+}
+
+
+.bloc-3{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc-4{
+    display: flex;
+    flex-direction: column;
 }

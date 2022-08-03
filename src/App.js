@@ -34,9 +34,6 @@ function App() {
 
   return (
     <div className="App">
-      <Elements stripe={stripePromise}>
-        <Payment />
-      </Elements>
       <Router>
         <Header handleToken={handleToken} userToken={userToken} />
         <Routes>
@@ -48,7 +45,14 @@ function App() {
           />
           <Route path="/login" element={<Login handleToken={handleToken} />} />
           <Route path="/publish" element={<Publish token={userToken} />} />
-          <Route path="/payment" element={<Payment />} />
+          <Route
+            path="/payment"
+            element={
+              <Elements stripe={stripePromise}>
+                <Payment />
+              </Elements>
+            }
+          />
         </Routes>
       </Router>
     </div>

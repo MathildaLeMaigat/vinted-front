@@ -1,0 +1,50 @@
+.main-payment-container{
+    height: 100vh;
+    background-color:  #ECEDEE;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-container{
+    background-color: white;
+    width: 600px;
+    height: 550px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.top-bloc-pay{
+    border: 2px solid red;
+    height: 35%;
+}
+
+.middle-bloc-pay{
+    // border: 2px solid green;
+    height: 35%;
+}
+
+.form-payment{
+    border-top: 1px solid lightgrey;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.pay{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.button-pay{
+    margin-top: 10px;
+    color: white;
+    background-color: #00BF6D;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}

@@ -1,13 +1,12 @@
 import "/Users/mathildalemaigat/LeReacteur/04-React/vinted-front/src/components/header.scss";
 
 import { Link } from "react-router-dom";
-import logo from "/Users/mathildalemaigat/LeReacteur/04-React/vinted-front/src/assets/download.png";
+import logo from "../assets/download.png";
 
 const Header = ({ handleToken, userToken }) => {
   return (
     <div className="header">
       <Link to="/">
-        {" "}
         <img className="logo" src={logo} alt="logo" />
       </Link>
 
