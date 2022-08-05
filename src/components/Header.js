@@ -1,4 +1,4 @@
-import "/Users/mathildalemaigat/LeReacteur/04-React/vinted-front/src/components/header.scss";
+import "../components/header.scss";
 
 import { Link } from "react-router-dom";
 import logo from "../assets/download.png";
@@ -30,6 +30,7 @@ const Header = ({ handleToken, userToken }) => {
       ) : (
         <>
           <button
+            className="disconnect"
             onClick={() => {
               handleToken();
             }}

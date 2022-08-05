@@ -49,7 +49,7 @@ function App() {
             path="/payment"
             element={
               <Elements stripe={stripePromise}>
-                <Payment />
+                <Payment token={userToken} />
               </Elements>
             }
           />

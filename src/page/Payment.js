@@ -1,15 +1,29 @@
 import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
-// import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { useLocation, Navigate } from "react-router-dom";
 
 import "./css-pages/payment.scss";
 
-const Payment = () => {
+const Payment = ({ token }) => {
   const stripe = useStripe();
   const elements = useElements();
+  const location = useLocation();
+  const { title, price } = location.state;
+  const [basket, setBasket] = useState([]);
 
   const [completed, setCompleted] = useState(false);
+
+  const getTotal = () => {
+    let total = Number({ price });
+    // basket.forEach((meal) => {
+    //   total += meal.price * meal.quantity;
+    // // });
+    // for (let i = 0; i < basket.length; i++) {
+    //   total += basket[i].price * basket[i].quantity;
+    // }
+    return total.toFixed(2);
+  };
 
   const handleSubmit = async (event) => {
     try {
@@ -38,7 +52,7 @@ const Payment = () => {
     }
   };
 
-  return (
+  return token ? (
     <div className="main-payment-container">
       {completed ? (
         <h1>Paiment confirmé! Merci de votre achat 🐥 </h1>
@@ -46,11 +60,28 @@ const Payment = () => {
         <div className="payment-container">
           <div className="top-bloc-pay">
             <p>Resumé de la commande</p>
-            <p>Commande</p>
-            <p>Frais protection acheteurs</p>
-            <p>Frais de port</p>
+            <div>
+              <span>Commande:</span>
+              <span>{Number({ price } + 0.8 + 0.4)}</span>
+            </div>
+            <div>
+              <span>Frais protection acheteurs:</span>
+              <span>0.80€</span>
+            </div>
+            <div>
+              <span>Frais de port</span>
+              <span>0.40€</span>
+            </div>
           </div>
-          <div className="middle-bloc-pay"></div>
+          <div className="middle-bloc-pay">
+            <span>Total</span>
+            <span>{Number(getTotal({ price } + 0.8 + 0.4))}</span>
+            <p>Il ne vous reste plus q'une etape pour vous offrir{title}.</p>
+            <p>
+              Vous allez payer {price} euros (frais de protection et frais de
+              port inclus).
+            </p>
+          </div>
           <form className="form-payment" onSubmit={handleSubmit}>
             <CardElement className="pay" />
             <button className="button-pay" type="submit">
@@ -60,6 +91,8 @@ const Payment = () => {
         </div>
       )}
     </div>
+  ) : (
+    <Navigate to="/login" />
   );
 };
 

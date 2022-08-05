@@ -3,6 +3,7 @@
 .hero{
     // border: red 2px solid;
     box-sizing: border-box;
+    position: relative;
 }
 
 .hero .img1{
@@ -10,25 +11,27 @@
     width: 100%;
   height: 450px;
   object-fit: cover;
-  position: relative;
+ 
   box-sizing: border-box;
 
 }
 
-.bloc-hero{
+.hero .bloc-hero{
     background-color: white;
     position: absolute;
-   width: 300px;
-    height: 200px;
-    bottom: 250px;
-    left: 100px;
-    padding: 40px;
+    padding: 50px;
+   max-width: 270px;
+    max-height: 200px;
+    left: 80px;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 .bloc-hero p{
     font-size: 40px;
-    margin-bottom: 30px;
-    line-height: 50px;
+    margin-bottom: 20px;
+    line-height: 40px;
 }
 
 .bloc-hero button{
@@ -43,13 +46,13 @@
 
 .hero .img2{
     // border: green 2px solid;
-    width: 100%;
-    position: absolute;
+    max-width: 100%;
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    // bottom: 50px;
-    top: 440px;
+bottom: 0;
+   
 }
 
 .ads{
@@ -83,7 +86,7 @@
 }
 
 .bloc-ad{
-    /* border: 2px solid red; */
+    //  border: 2px solid red; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -92,5 +95,24 @@
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 
+.button-page button{
+    border: none;
+    background-color: #2BAEB7;
+    color: white;
+    border-radius: 10px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.button-page > button {
+    margin-right: 20px;
+}
+
+.howManyOffers{
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+}
