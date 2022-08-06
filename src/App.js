@@ -2,9 +2,6 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cookies from "js-cookie";
 import { useState } from "react";
-// Stipe
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
 
 // import des pages
 import Home from "./page/Home";
@@ -14,10 +11,6 @@ import Login from "./page/Login";
 import Header from "./components/Header";
 import Publish from "./page/Publish";
 import Payment from "./page/Payment";
-
-const stripePromise = loadStripe(
-  "pk_test_51HCObyDVswqktOkX6VVcoA7V2sjOJCUB4FBt3EOiAdSz5vWudpWxwcSY8z2feWXBq6lwMgAb5IVZZ1p84ntLq03H00LDVc2RwP"
-);
 
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -45,14 +38,7 @@ function App() {
           />
           <Route path="/login" element={<Login handleToken={handleToken} />} />
           <Route path="/publish" element={<Publish token={userToken} />} />
-          <Route
-            path="/payment"
-            element={
-              <Elements stripe={stripePromise}>
-                <Payment token={userToken} />
-              </Elements>
-            }
-          />
+          <Route path="/payment" element={<Payment token={userToken} />} />
         </Routes>
       </Router>
     </div>
