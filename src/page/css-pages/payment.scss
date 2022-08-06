@@ -12,12 +12,23 @@
     width: 600px;
     height: 550px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 30px;
 }
 
 .top-bloc-pay{
-    border: 2px solid red;
+    border-bottom: #ECEDEE 1px solid;
     height: 35%;
+    font-size: 17px;
+}
+
+.top-bloc-pay p {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.top-bloc-pay div{
+    margin-top: 20px;
 }
 
 .middle-bloc-pay{
@@ -56,4 +67,10 @@
 .middle-bloc-pay .total{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.middle-bloc-pay{
+    font-size: 17px;
+   margin-top: 50px;
 }

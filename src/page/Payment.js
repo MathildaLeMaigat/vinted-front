@@ -34,10 +34,12 @@ const Payment = ({ token }) => {
           </div>
         </div>
         <div className="middle-bloc-pay">
-          <span className="total">Total</span>
-          <span>
-            <span className="bold">{price}</span>{" "}
-          </span>
+          <div className="total">
+            <span>Total</span>
+            <span>
+              <span className="bold">{price}</span>{" "}
+            </span>
+          </div>
           <p>
             Il ne vous reste plus q'une etape pour vous offrir
             <span className="bold">{title}</span>.
