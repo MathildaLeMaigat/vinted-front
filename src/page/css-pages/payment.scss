@@ -21,10 +21,9 @@
     font-size: 17px;
 }
 
-.top-bloc-pay p {
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
+.top-bloc-pay div {
+   display: flex;
+   justify-content: space-between;
 }
 
 .top-bloc-pay div{
