@@ -2,8 +2,18 @@ import "../components/header.scss";
 
 import { Link } from "react-router-dom";
 import logo from "../assets/download.png";
+import Cookies from "js-cookie";
 
-const Header = ({ handleToken, userToken }) => {
+// import PriceRange from "./components/PriceRange";
+
+const Header = ({
+  handleToken,
+  userToken,
+  searchBar,
+  setSearchBar,
+  data,
+  setData,
+}) => {
   return (
     <div className="header">
       <Link to="/">
@@ -11,7 +21,15 @@ const Header = ({ handleToken, userToken }) => {
       </Link>
 
       <div>
-        <input type="text" placeholder="Recherche des articles"></input>
+        <input
+          className="searchBar"
+          type="search"
+          placeholder="Recherche des articles"
+          value={searchBar}
+          onChange={(event) => {
+            setSearchBar(event.target.value);
+          }}
+        ></input>
       </div>
       {!userToken ? (
         <>
@@ -32,6 +50,7 @@ const Header = ({ handleToken, userToken }) => {
           <button
             className="disconnect"
             onClick={() => {
+              Cookies.remove("token");
               handleToken();
             }}
           >

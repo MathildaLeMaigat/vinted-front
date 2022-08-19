@@ -1,56 +1,55 @@
 /* Header */
 
-.header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 }
 
-.header input{
-    font-size: 15px;
-    height: 20px;
-    width: 500px;
-    background-color: #F5F6F7;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
+.searchBar {
+  font-size: 15px;
+  height: 20px;
+  width: 500px;
+  background-color: #f5f6f7;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
 }
 
-.sell-articles{
-    background-color: #2EB0BA;
-    color: white;
-    margin-left: 50px;
+.sell-articles {
+  background-color: #2eb0ba;
+  color: white;
+  margin-left: 50px;
 }
 
-.header button:hover{
-    cursor: pointer;
+.header button:hover {
+  cursor: pointer;
 }
 
-.header button{
-    font-size: 12px;
-    width: 120px;
-    height: 28px;
-    border: none;
-    padding: 7px;
-    border-radius: 7px;
+.header button {
+  font-size: 12px;
+  width: 120px;
+  height: 28px;
+  border: none;
+  padding: 7px;
+  border-radius: 7px;
 }
 
-.header .log{
-    background-color: white;
-    color: #2EB0BA;
-    border: 1px solid #2EB0BA;
-    margin-right: 20px;
+.header .log {
+  background-color: white;
+  color: #2eb0ba;
+  border: 1px solid #2eb0ba;
+  margin-right: 20px;
 }
 
-
-.logo{
+.logo {
   height: 40px;
   width: 104px;
 }
 
-.disconnect{
-    background-color: #C2175B;
-    color: white;
+.disconnect {
+  background-color: #c2175b;
+  color: white;
 }
