@@ -7,9 +7,11 @@ import { Link } from "react-router-dom";
 import imageHero from "../assets/hero.09bfd0f9.jpg";
 import tag from "../assets/tear.svg";
 
-const Home = () => {
+const Home = ({ searchBar }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  // const [sort, setSort] = useState(false);
+  // const [rangeValues, setRangeValues] = useState([0, 10000]);
 
   const [page, setPage] = useState(1);
 
@@ -17,9 +19,9 @@ const Home = () => {
     try {
       const fetchData = async () => {
         const response = await axios.get(
-          `https://lereacteur-vinted-api.herokuapp.com/offers?limit=15&page=${page}`
+          `https://lereacteur-vinted-api.herokuapp.com/offers?limit=15&page=${page}&title=${searchBar}`
         );
-        // console.log(response.data);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       };
@@ -27,10 +29,10 @@ const Home = () => {
     } catch (error) {
       console.log({ error: error.message });
     }
-  }, [page]);
+  }, [page, searchBar]);
 
   return isLoading === true ? (
-    <div>Loading...</div>
+    <h1>Loading...</h1>
   ) : (
     <div>
       <div className="hero">
@@ -49,6 +51,7 @@ const Home = () => {
       <div className="bloc-ad">
         {data.offers.map((offer, product_id) => {
           // console.log(offer._id);
+          // console.log(data.count);
           return (
             <Link key={product_id} to={`/offer/${offer._id}`}>
               <div className="ads">

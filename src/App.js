@@ -16,37 +16,21 @@ import axios from "axios";
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
   const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+
   const [searchBar, setSearchBar] = useState("");
-  const [sort, setSort] = useState(false);
-  const [rangeValues, setRangeValues] = useState([0, 100000]);
+  // const [sort, setSort] = useState(false);
+  // const [rangeValues, setRangeValues] = useState([0, 10000]);
 
   useEffect(() => {
     const fetchData = async () => {
-      let filters = "";
-
-      if (searchBar) {
-        filters += `&title=${searchBar}`;
-      }
-
-      if (sort) {
-        filters += `&sort=descending`;
-      }
-
-      if (!sort) {
-        filters += `&sort=ascending`;
-      }
-
       const response = await axios.get(
-        `https://vinted-api-serveur.herokuapp.com/offers?minPrice=${rangeValues[0]}&maxPrice=${rangeValues[1]}` +
-          filters
+        `https://vinted-api-serveur.herokuapp.com/offers?title=${searchBar}`
       );
       setData(response.data);
       console.log(response.data);
-      setIsLoading(false);
     };
     fetchData();
-  }, [searchBar, sort, rangeValues]);
+  }, [searchBar]);
 
   const handleToken = (token) => {
     if (token) {
@@ -58,9 +42,7 @@ function App() {
     }
   };
 
-  return isLoading ? (
-    <h1>Loading...</h1>
-  ) : (
+  return (
     <div className="App">
       <Router>
         <Header
@@ -68,14 +50,14 @@ function App() {
           userToken={userToken}
           searchBar={searchBar}
           setSearchBar={setSearchBar}
-          sort={sort}
-          setSort={setSort}
-          setRangeValues={setRangeValues}
           data={data}
           setData={setData}
         />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home searchBar={searchBar} setSearchBar={setSearchBar} />}
+          />
           <Route path="/offer/:id" element={<Offer />} />
           <Route
             path="/signup"

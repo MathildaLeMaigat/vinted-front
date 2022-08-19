@@ -3,17 +3,14 @@ import "../components/header.scss";
 import { Link } from "react-router-dom";
 import logo from "../assets/download.png";
 import Cookies from "js-cookie";
+// import { useState } from "react";
 
 // import PriceRange from "./components/PriceRange";
 
-const Header = ({
-  handleToken,
-  userToken,
-  searchBar,
-  setSearchBar,
-  data,
-  setData,
-}) => {
+const Header = ({ handleToken, userToken, searchBar, setSearchBar }) => {
+  // const [sort, setSort] = useState(false);
+  // const [rangeValues, setRangeValues] = useState([0, 10000]);
+
   return (
     <div className="header">
       <Link to="/">
