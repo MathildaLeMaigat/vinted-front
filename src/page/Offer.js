@@ -35,29 +35,35 @@ const Offer = () => {
         <div className="left-bloc">
           <img src={data.product_image.secure_url} alt="img" />
         </div>
+
         <div className="right-bloc">
           <div className="top-part-right">
-            <h2>{data.product_price} €</h2>
+            <p className="price-offer">{data.product_price} €</p>
             {data.product_details.map((detail, index) => {
               const keyName = Object.keys(detail);
               console.log(keyName[0]);
               return (
-                <div className="items1" key={index}>
+                <div key={index} className="offer-list">
                   <span>{keyName[0]}</span>
-                  <span> {detail[keyName[0]]}</span>
+                  <span>{detail[keyName[0]]}</span>
                 </div>
               );
             })}
           </div>
 
           <div className="bottom-part-right">
-            <h2>{data.product_name}</h2>
-            <Link
-              to="/payment"
-              state={{ title: data.product_name, price: data.product_price }}
-            >
-              <button>Acheter</button>
-            </Link>
+            <div>
+              <p className="name">{data.product_name}</p>
+              <p className="description">{data.product_description}</p>
+            </div>
+            <div className="pay-button">
+              <Link
+                to="/payment"
+                state={{ title: data.product_name, price: data.product_price }}
+              >
+                <button>Acheter</button>
+              </Link>
+            </div>
             ;
           </div>
         </div>

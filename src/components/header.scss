@@ -4,24 +4,48 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .searchBar {
-  font-size: 15px;
-  height: 20px;
+  font-size: 13px;
+  height: 4px;
   width: 500px;
   background-color: #f5f6f7;
   border: none;
   padding: 20px;
   border-radius: 10px;
   outline: none;
+  padding-left: 60px;
+  margin-bottom: 10px;
+}
+
+.searchBar::placeholder {
+  color: #cbcccd;
+  font-size: 16px;
+}
+
+.fa-icone {
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  color: #bbbbbb;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .sell-articles {
   background-color: #2eb0ba;
   color: white;
   margin-left: 50px;
+  width: 130px;
+  border: 1px solid #2eb0ba;
 }
 
 .header button:hover {
@@ -30,26 +54,41 @@
 
 .header button {
   font-size: 12px;
-  width: 120px;
-  height: 28px;
-  border: none;
+  // width: 120px;
+  height: 40px;
   padding: 7px;
   border-radius: 7px;
 }
 
-.header .log {
+.log {
   background-color: white;
   color: #2eb0ba;
   border: 1px solid #2eb0ba;
   margin-right: 20px;
+  width: 130px;
 }
 
 .logo {
   height: 40px;
   width: 104px;
+  cursor: pointer;
 }
 
 .disconnect {
   background-color: #c2175b;
   color: white;
+  width: 130px;
+  border: none;
+}
+
+.trie {
+  margin-top: 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.trie-button {
+  width: 25px;
+  border: none;
 }

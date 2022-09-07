@@ -19,11 +19,12 @@
   background-color: white;
   position: absolute;
   padding: 50px;
-  max-width: 270px;
-  max-height: 200px;
+  max-width: 260px;
+  max-height: 150px;
   left: 80px;
   top: 60px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -42,6 +43,7 @@
   width: 190px;
   border-radius: 10px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .hero .img2 {
@@ -79,9 +81,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 16px;
-  color: gray;
+  font-size: 13px;
+  color: #999999;
   padding: 10px;
+  font-weight: bolder;
+}
+
+.priceOffer {
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+  margin-bottom: 5px;
 }
 
 .bloc-ad {
@@ -98,12 +108,14 @@
 }
 
 .button-page button {
+  width: 250px;
   border: none;
   background-color: #2baeb7;
   color: white;
-  border-radius: 10px;
-  padding: 7px;
+  border-radius: 8px;
+  padding: 5px;
   cursor: pointer;
+  font-size: 13px;
 }
 
 .button-page > button {

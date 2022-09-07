@@ -1,42 +1,60 @@
 /* Sign Up */
 
 .top {
-    width: 285px;
-    height: 45px;
-   margin-bottom: 15px;
-   border: none;
-   border-bottom: lightcoral 1px solid;
+  width: 285px;
+  height: 45px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: lightcoral 1px solid;
 }
 
-.newsletter{
-    font-size: 18px;
-    color: lightgrey;
+.newsletter {
+  font-size: 18px;
+  //   color: lightgrey;
+  margin-top: 20px;
 }
 
-.signup button{
-        text-align: center;
-         width: 295px;
-         height: 45px;
-         margin-top: 25px;
-        margin-bottom: 15px;
-        border: none;
-        background-color: #2EB0BA;
-        color: white;
-        font-size: 15px;
-        border-radius: 5px;
+.checkbox input {
+  font: 40px;
 }
 
-.signup button:hover{
-    cursor: pointer;
+.signup button {
+  text-align: center;
+  width: 295px;
+  height: 45px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #2eb0ba;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
 }
 
-.signup input{
-    outline: none;
+.signup button:hover {
+  cursor: pointer;
 }
 
-.signup form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.signup input {
+  outline: none;
+}
+
+.signup form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.newsletter-text {
+  width: 285px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: grey;
+  text-align: justify;
+}
+
+.link {
+  font-size: 15px;
+  color: #2eb0ba;
 }

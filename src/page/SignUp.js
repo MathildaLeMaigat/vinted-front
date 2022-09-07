@@ -2,7 +2,7 @@ import "./css-pages/signup.scss";
 
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = ({ handleToken }) => {
   const [username, setUsername] = useState("");
@@ -65,6 +65,7 @@ const SignUp = ({ handleToken }) => {
         ></input>
         <div className="newsletter">
           <input
+            className="checkbox"
             type="checkbox"
             checked={newsletter}
             onChange={() => {
@@ -72,9 +73,16 @@ const SignUp = ({ handleToken }) => {
             }}
           ></input>
           <span>S'inscrire à notre newsletter</span>
+          <p className="newsletter-text">
+            En m'inscrivant je confirme avoir lu et accepté les Termes &
+            Conditions et Politique de Confidentialité de Vinted. Je confirme
+            avoir au moins 18 ans.
+          </p>
         </div>
-
-        <button>S'inscrire</button>
+        <button>S'inscrire</button>{" "}
+        <Link to="/login" className="link">
+          Tu as déjà un compte ? Connecte-toi !
+        </Link>
       </form>
     </div>
   );

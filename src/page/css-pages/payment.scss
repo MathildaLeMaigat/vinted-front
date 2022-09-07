@@ -1,75 +1,76 @@
-.main-payment-container{
-    height: 100vh;
-    background-color:  #ECEDEE;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-payment-container {
+  height: 100vh;
+  background-color: #ecedee;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.payment-container{
-    background-color: white;
-    width: 600px;
-    height: 550px;
-    box-sizing: border-box;
-    padding: 30px;
+.payment-container {
+  background-color: white;
+  width: 600px;
+  height: 550px;
+  box-sizing: border-box;
+  padding: 30px;
 }
 
-.top-bloc-pay{
-    border-bottom: #ECEDEE 1px solid;
-    height: 35%;
-    font-size: 17px;
+.top-bloc-pay {
+  border-bottom: #ecedee 1px solid;
+  height: 35%;
+  font-size: 17px;
 }
 
 .top-bloc-pay div {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.top-bloc-pay div{
-    margin-top: 20px;
+.top-bloc-pay div {
+  margin-top: 20px;
 }
 
-.middle-bloc-pay{
-    // border: 2px solid green;
-    height: 35%;
+.middle-bloc-pay {
+  // border: 2px solid green;
+  height: 35%;
 }
 
-.form-payment{
-    border-top: 1px solid lightgrey;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 15px;
+.form-payment {
+  border-top: 1px solid lightgrey;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
 }
 
-.pay{
-    padding: 10px;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
+.pay {
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
 }
 
-.button-pay{
-    margin-top: 10px;
-    color: white;
-    background-color: #00BF6D;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
+.button-pay {
+  margin-top: 10px;
+  color: white;
+  background-color: #00bf6d;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .middle-bloc-pay .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.middle-bloc-pay .total{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.middle-bloc-pay .total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.middle-bloc-pay{
-    font-size: 17px;
-   margin-top: 50px;
+.middle-bloc-pay {
+  font-size: 17px;
+  margin-top: 50px;
 }

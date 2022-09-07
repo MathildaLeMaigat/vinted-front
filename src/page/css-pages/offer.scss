@@ -1,75 +1,109 @@
 /* Offers */
-.main-bloc-offer{
-    height: 100vh;
-    background-color: #ECEDEE;
-    padding: 30px;
+.main-bloc-offer {
+  height: 100vh;
+  background-color: #ecedee;
+  padding: 10px;
 }
 
-.bloc-offer{
-    /* border: blue 2px solid; */
-    height: 550px;
-    margin: 30px 200px;
-    display: flex;
-    justify-content: space-between;
-    /* padding: 40px; */
+.bloc-offer {
+  /* border: blue 2px solid; */
+  height: 600px;
+  margin: 30px 200px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .left-bloc {
-    /* border: green 2px solid; */
-    width: 45%
+  /* border: green 2px solid; */
+  width: 45%;
 }
 
-.left-bloc img{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+.left-bloc img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
-.right-bloc{
-    /* border: 2px solid red; */
-    width: 35%;
-    background-color: white;
-    padding: 30px;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.right-bloc {
+  /* border: 2px solid red; */
+  width: 35%;
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.top-part-right{
-    height: 40%;
-    border-bottom: 1px solid lightgrey;
+.top-part-right {
+  height: 40%;
+  border-bottom: 1px solid lightgrey;
 }
 
-.right-bloc h2{
-    margin-bottom: 15px;
-    margin-top: 20px;
+.price-offer {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 25px;
 }
 
-.items1{
-    display: flex;
-    justify-content: space-between;
+.offer-list {
+  display: flex;
+  padding: 2px 0;
 }
 
-.bottom-part-right{
-    /* border: black 2px solid; */
-    height: 40%;
-    text-align: center;
+.offer-list span {
+  flex: 1;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
-.bottom-part-right button{
-    text-align: center;
-    width: 295px;
-    height: 45px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    border: none;        
-    background-color: #2EB0BA;
-    color: white;
-    font-size: 15px;
-    border-radius: 5px;
+.offer-list span:nth-child(odd) {
+  color: #999;
+  font-weight: bold;
 }
 
-.bottom-part-right button:hover{
-    cursor: pointer;
+.offer-list span:nth-child(even) {
+  color: #454747;
+  font-weight: bold;
+}
+
+.bottom-part-right {
+  /* border: black 2px solid; */
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom-part-right .name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.bottom-part-right .description {
+  color: #666;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bottom-part-right .pay-button {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.bottom-part-right button {
+  text-align: center;
+  padding: 8px 150px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #2eb0ba;
+  color: white;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+.bottom-part-right button:hover {
+  cursor: pointer;
 }
