@@ -1,10 +1,9 @@
-import "../components/checkOutForm.scss";
-
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const CheckOutForm = ({ price, title }) => {
+const CheckOutForm = ({ productName, totalPrice }) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -26,9 +25,9 @@ const CheckOutForm = ({ price, title }) => {
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/payment",
         {
+          amount: totalPrice,
+          title: productName,
           token: stripeResponse.token.id,
-          amount: price,
-          title: title,
         }
       );
 
@@ -44,7 +43,12 @@ const CheckOutForm = ({ price, title }) => {
   };
 
   return completed ? (
-    <p>Merci pour votre achat 🐥</p>
+    <>
+      <p>Merci pour votre achat 🐥</p>
+      <Link to="/">
+        <p className="accueil"> → Accueil</p>
+      </Link>
+    </>
   ) : (
     <div>
       <form onSubmit={handleSubmit}>

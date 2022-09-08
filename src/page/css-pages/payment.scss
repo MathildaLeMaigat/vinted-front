@@ -10,38 +10,8 @@
 .payment-container {
   background-color: white;
   width: 600px;
-  height: 550px;
   box-sizing: border-box;
   padding: 30px;
-}
-
-.top-bloc-pay {
-  border-bottom: #ecedee 1px solid;
-  height: 35%;
-  font-size: 17px;
-}
-
-.top-bloc-pay div {
-  display: flex;
-  justify-content: space-between;
-}
-
-.top-bloc-pay div {
-  margin-top: 20px;
-}
-
-.middle-bloc-pay {
-  // border: 2px solid green;
-  height: 35%;
-}
-
-.form-payment {
-  border-top: 1px solid lightgrey;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px;
 }
 
 .pay {
@@ -58,19 +28,57 @@
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  width: 100px;
 }
 
-.middle-bloc-pay .bold {
-  font-weight: bold;
+.accueil {
+  font-size: 15px;
+  margin-top: 20px;
 }
 
-.middle-bloc-pay .total {
+.content li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
+.content .bold {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .middle-bloc-pay {
   font-size: 17px;
   margin-top: 50px;
+}
+
+// summary
+
+.payment-card {
+  background: #ffffff;
+}
+
+.payment-card > .title {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+  padding: 24px 24px 8px;
+}
+
+.payment-card .content {
+  padding: 24px;
+  text-align: justify;
+}
+
+.payment-card .divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
+  margin: 24px 0;
+}
+
+.payment-card .content .bold {
+  font-weight: bold;
 }

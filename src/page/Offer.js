@@ -1,15 +1,21 @@
 import "./css-pages/offer.scss";
+import { Rings } from "react-loader-spinner";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const Offer = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const price = data.product_price;
+  const protectionFees = (price / 10).toFixed(2);
+  const shippingFees = (protectionFees * 2).toFixed(2);
+  const total = Number(price) + Number(protectionFees) + Number(shippingFees);
 
   useEffect(() => {
     try {
@@ -27,8 +33,10 @@ const Offer = () => {
     }
   }, [id]);
 
-  return isLoading === true ? (
-    <div>Loading...</div>
+  return isLoading ? (
+    <div className="loader-home">
+      <Rings type="Puff" color="#2CB1BA" height={120} width={120} />
+    </div>
   ) : (
     <div className="main-bloc-offer">
       <div className="bloc-offer">
@@ -40,6 +48,7 @@ const Offer = () => {
           <div className="top-part-right">
             <p className="price-offer">{data.product_price} €</p>
             {data.product_details.map((detail, index) => {
+              console.log(detail);
               const keyName = Object.keys(detail);
               console.log(keyName[0]);
               return (
@@ -57,12 +66,21 @@ const Offer = () => {
               <p className="description">{data.product_description}</p>
             </div>
             <div className="pay-button">
-              <Link
-                to="/payment"
-                state={{ title: data.product_name, price: data.product_price }}
+              <button
+                onClick={() => {
+                  navigate("/payment", {
+                    state: {
+                      productName: data.product_name,
+                      totalPrice: total,
+                      protectionFees: protectionFees,
+                      shippingFees: shippingFees,
+                      price: data.product_price,
+                    },
+                  });
+                }}
               >
-                <button>Acheter</button>
-              </Link>
+                Acheter
+              </button>
             </div>
             ;
           </div>

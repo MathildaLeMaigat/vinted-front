@@ -2,6 +2,7 @@ import "./css-pages/home.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Rings } from "react-loader-spinner";
 
 // Import images
 import imageHero from "../assets/hero.09bfd0f9.jpg";
@@ -32,7 +33,9 @@ const Home = ({ searchBar, data, setData }) => {
   }, [page, searchBar, setData]);
 
   return isLoading === true ? (
-    <h1>Loading...</h1>
+    <div className="loader-home">
+      <Rings type="Puff" color="#2CB1BA" height={120} width={120} />
+    </div>
   ) : (
     <div>
       <div className="hero">

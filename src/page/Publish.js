@@ -56,15 +56,15 @@ const Publish = ({ token }) => {
   };
 
   return token ? (
-    <div className="bloc-publish">
-      <form className="publish-form" onSubmit={handleSubmit}>
-        <div className="div-h2">
-          <h2>Vends ton article</h2>
-        </div>
+    <form className="publish-form" onSubmit={handleSubmit}>
+      <div className="div-h2">
+        <p>Vends ton article</p>
+      </div>
 
-        <div className="publish-img">
+      <div className="publish-img">
+        <div className="bloc-img">
           <input
-            id="files"
+            style={{ name: "photo" }}
             type="file"
             onChange={(event) => {
               console.log(event.target.files[0]);
@@ -81,92 +81,100 @@ const Publish = ({ token }) => {
             />
           </div>
         </div>
-        <div className="bloc-2">
-          <div className="bloc-2-input">
-            <div className="bloc-3">
-              <div>
-                <span>Title</span>
-                <input
-                  type="text"
-                  placeholder="ex: title..."
-                  value={title}
-                  onChange={(event) => setTitle(event.target.value)}
-                />
-              </div>{" "}
-              <div>
-                <span>Description</span>{" "}
-                <input
-                  type="text"
-                  placeholder="ex: description..."
-                  value={description}
-                  onChange={(event) => setDescription(event.target.value)}
-                />
-              </div>
-            </div>
-            <div className="bloc-4">
-              <div>
-                <span>Brand</span>
-                <input
-                  type="text"
-                  placeholder="ex: brand..."
-                  value={brand}
-                  onChange={(event) => setBrand(event.target.value)}
-                />
-              </div>
-              <div>
-                <span>Size</span>
-                <input
-                  type="text"
-                  placeholder="ex: size..."
-                  value={size}
-                  onChange={(event) => setSize(event.target.value)}
-                />
-              </div>
-              <div>
-                <span>Color</span>
-                <input
-                  type="text"
-                  placeholder="ex: color..."
-                  value={color}
-                  onChange={(event) => setColor(event.target.value)}
-                />
-              </div>
-              <div>
-                <span>Condition</span>{" "}
-                <input
-                  type="text"
-                  placeholder="ex: condition..."
-                  value={condition}
-                  onChange={(event) => setCondition(event.target.value)}
-                />
-              </div>
-              <div>
-                <span>City</span>
-                <input
-                  type="text"
-                  placeholder="ex: city..."
-                  value={city}
-                  onChange={(event) => setCity(event.target.value)}
-                />
-              </div>
-            </div>
-
+      </div>
+      <div className="bloc-2">
+        <div className="bloc-2-input">
+          <div className="bloc-3">
             <div>
-              <span>Price</span>
+              <span>Title</span>
               <input
+                style={{ fontSize: "15px" }}
                 type="text"
-                placeholder="ex: price..."
-                value={price}
-                onChange={(event) => setPrice(event.target.value)}
+                placeholder="ex: title..."
+                value={title}
+                onChange={(event) => setTitle(event.target.value)}
+              />
+            </div>{" "}
+            <div>
+              <span>Description</span>{" "}
+              <input
+                style={{ fontSize: "15px" }}
+                type="text"
+                placeholder="ex: description..."
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
               />
             </div>
           </div>
-          <div className="add-button">
-            <button>Ajouter</button>
+          <div className="bloc-4">
+            <div>
+              <span>Brand</span>
+              <input
+                style={{ fontSize: "15px" }}
+                type="text"
+                placeholder="ex: brand..."
+                value={brand}
+                onChange={(event) => setBrand(event.target.value)}
+              />
+            </div>
+            <div>
+              <span>Size</span>
+              <input
+                style={{ fontSize: "15px" }}
+                type="text"
+                placeholder="ex: size..."
+                value={size}
+                onChange={(event) => setSize(event.target.value)}
+              />
+            </div>
+            <div>
+              <span>Color</span>
+              <input
+                style={{ fontSize: "15px" }}
+                type="text"
+                placeholder="ex: color..."
+                value={color}
+                onChange={(event) => setColor(event.target.value)}
+              />
+            </div>
+            <div>
+              <span>Condition</span>{" "}
+              <input
+                style={{ fontSize: "15px" }}
+                type="text"
+                placeholder="ex: condition..."
+                value={condition}
+                onChange={(event) => setCondition(event.target.value)}
+              />
+            </div>
+            <div>
+              <span>City</span>
+              <input
+                style={{ fontSize: "15px" }}
+                type="text"
+                placeholder="ex: city..."
+                value={city}
+                onChange={(event) => setCity(event.target.value)}
+              />
+            </div>
+          </div>
+
+          <div>
+            <span>Price</span>
+            <input
+              style={{ fontSize: "15px" }}
+              type="text"
+              placeholder="ex: price..."
+              value={price}
+              onChange={(event) => setPrice(event.target.value)}
+            />
           </div>
         </div>
-      </form>
-    </div>
+        <div className="add-button">
+          <button>Ajouter</button>
+        </div>
+      </div>
+    </form>
   ) : (
     <Navigate to="/login" />
   );
