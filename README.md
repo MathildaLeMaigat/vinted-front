@@ -1,3 +1,23 @@
+## Vinted | Project Fullstack | Front-End | React
+
+Clone of the already existing website Vinted
+
+<div>
+<img src="src/assets/shot.png" width="100%">
+</div>
+
+## Features
+
+- Search by name
+- Pagination
+- Filters
+- Loader (Package)
+- Navigation
+- Creating an Account
+- LogIn / LogOut
+- Payment (Stripe)
+- Responsive
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
