@@ -11,7 +11,7 @@ Clone of the already existing website Vinted
 - Search by name
 - Pagination
 - Filters
-- Loader (Package)
+- Loader
 - Navigation
 - Creating an Account
 - LogIn / LogOut
