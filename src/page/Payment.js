@@ -5,7 +5,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
 import ProductSummary from "../components/ProductSummary";
-import CheckOutForm from "../components/CheckOutForm";
+import CheckOutForm from "./CheckOutForm";
 
 import "./css-pages/payment.scss";
 
