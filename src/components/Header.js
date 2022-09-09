@@ -34,7 +34,6 @@ const Header = ({
       >
         <img className="logo" src={logo} alt="logo" />
       </div>
-
       <div className="search-container">
         <input
           className="searchBar"

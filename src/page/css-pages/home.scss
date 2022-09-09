@@ -11,7 +11,6 @@
   width: 100%;
   height: 450px;
   object-fit: cover;
-
   box-sizing: border-box;
 }
 
@@ -100,7 +99,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  /* padding: 50px; */
   margin-left: 80px;
   margin-right: 80px;
   margin-top: 50px;
@@ -118,6 +116,13 @@
   font-size: 13px;
 }
 
+.button-page {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button-page > button {
   margin-right: 20px;
 }
@@ -126,4 +131,116 @@
   font-size: 20px;
   padding: 30px;
   text-align: center;
+}
+
+.bloc-hero-hidden {
+  display: none;
+}
+
+.home-serachBar {
+  display: none;
+}
+
+// MEDIA QUERIES //
+
+@media (max-width: 1184px) {
+  .hero .bloc-hero {
+    padding: 40px;
+  }
+
+  .bloc-hero p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .bloc-hero button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero .bloc-hero {
+    padding: 40px;
+    max-width: 230px;
+    max-height: 130px;
+  }
+
+  .bloc-hero p {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .bloc-hero button {
+    padding: 10px;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .bloc-hero {
+    display: none;
+  }
+  .bloc-hero-hidden {
+    display: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bloc-hero-hidden p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .bloc-hero-hidden button {
+    background-color: #2baeb7;
+    color: white;
+    padding: 6px;
+    border: none;
+    width: 400px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .hero .img1 {
+    height: 100%;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  .howManyOffers {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .bloc-ad {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .button-page button {
+    width: 170px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+
+  .home-searchBar {
+    position: relative;
+    display: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-fa-icone {
+    position: absolute;
+    left: 70px;
+    top: 25px;
+    color: #bbbbbb;
+    padding-left: 10px;
+    font-size: 15px;
+  }
 }

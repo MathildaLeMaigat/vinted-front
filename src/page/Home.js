@@ -7,8 +7,9 @@ import { Rings } from "react-loader-spinner";
 // Import images
 import imageHero from "../assets/hero.09bfd0f9.jpg";
 import tag from "../assets/tear.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Home = ({ searchBar, data, setData }) => {
+const Home = ({ data, setData, searchBar, setSearchBar }) => {
   const [isLoading, setIsLoading] = useState(true);
   // const [sort, setSort] = useState(false);
   // const [rangeValues, setRangeValues] = useState([0, 10000]);
@@ -21,7 +22,7 @@ const Home = ({ searchBar, data, setData }) => {
         const response = await axios.get(
           `https://lereacteur-vinted-api.herokuapp.com/offers?limit=15&page=${page}&title=${searchBar}`
         );
-        // console.log(response.data);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
         window.scrollTo(0, 0);
@@ -50,9 +51,29 @@ const Home = ({ searchBar, data, setData }) => {
           </div>
         </div>
       </div>
+      <div className="bloc-hero-hidden">
+        <p>Prêts à faire du tri dans vos placards?</p>
+        <Link to="/publish">
+          <button>Vends maintenant !</button>
+        </Link>
+      </div>
       <p className="howManyOffers">
         Nous avons {data.count} offres à vous proposer !
       </p>
+      {/*  */}
+      <div className="home-searchBar">
+        <input
+          className="searchBar"
+          type="text"
+          placeholder="Recherche des articles"
+          value={searchBar}
+          onChange={(event) => {
+            setSearchBar(event.target.value);
+          }}
+        />
+        <FontAwesomeIcon icon="search" className="home-fa-icone" />
+      </div>
+      {/*  */}
       <div className="bloc-ad">
         {data.offers.map((offer, product_id) => {
           // console.log(offer._id);
@@ -69,10 +90,10 @@ const Home = ({ searchBar, data, setData }) => {
             </Link>
           );
         })}
-        <div className="button-page">
-          <button onClick={() => setPage(page - 1)}>Page précédente</button>
-          <button onClick={() => setPage(page + 1)}>Page suivante</button>
-        </div>
+      </div>{" "}
+      <div className="button-page">
+        <button onClick={() => setPage(page - 1)}>← Page précédente</button>
+        <button onClick={() => setPage(page + 1)}>Page suivante →</button>
       </div>
     </div>
   );
