@@ -7,14 +7,14 @@ const Publish = ({ token }) => {
   // console.log(token);
   // state for input
   const [picture, setPicture] = useState(null);
-  const [title, setTitle] = useState("air max");
-  const [description, setDescription] = useState("air max - tres bon etat");
-  const [brand, setBrand] = useState("nike");
-  const [size, setSize] = useState("44");
-  const [color, setColor] = useState("blue");
-  const [condition, setCondition] = useState("tres bon etat");
-  const [city, setCity] = useState("paris");
-  const [price, setPrice] = useState("80");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [brand, setBrand] = useState("");
+  const [size, setSize] = useState("");
+  const [color, setColor] = useState("");
+  const [condition, setCondition] = useState("");
+  const [city, setCity] = useState("");
+  const [price, setPrice] = useState("");
 
   const [preview, setPreview] = useState(null);
 

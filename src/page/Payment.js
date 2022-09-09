@@ -32,8 +32,8 @@ const Payment = ({ token, name }) => {
           <div className="content">
             Il ne vous reste plus qu'un étape pour vous offrir
             <span className="bold"> {productName}</span>. Vous allez payer
-            <span className="bold">{totalPrice} €</span> (frais de protection et
-            frais de port inclus).
+            <span className="bold"> {totalPrice} €</span> (frais de protection
+            et frais de port inclus).
             <div className="divider" />
             <Elements stripe={stripePromise}>
               <CheckOutForm productName={productName} totalPrice={totalPrice} />
