@@ -6,6 +6,7 @@ import { Elements } from "@stripe/react-stripe-js";
 
 import ProductSummary from "../components/ProductSummary";
 import CheckOutForm from "../components/CheckOutForm";
+
 import "./css-pages/payment.scss";
 
 const stripePromise = loadStripe(
@@ -30,7 +31,7 @@ const Payment = ({ token, name }) => {
         <div className="payment-card">
           <div className="content">
             Il ne vous reste plus qu'un étape pour vous offrir
-            <span className="bold"> {productName}</span>. Vous allez payer{" "}
+            <span className="bold"> {productName}</span>. Vous allez payer
             <span className="bold">{totalPrice} €</span> (frais de protection et
             frais de port inclus).
             <div className="divider" />
