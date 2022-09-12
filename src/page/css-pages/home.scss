@@ -141,6 +141,10 @@
   display: none;
 }
 
+.home-trie {
+  display: none;
+}
+
 // MEDIA QUERIES //
 
 @media (max-width: 1184px) {
@@ -235,12 +239,17 @@
     align-items: center;
   }
 
-  .home-fa-icone {
-    position: absolute;
-    left: 70px;
-    top: 25px;
-    color: #bbbbbb;
-    padding-left: 10px;
-    font-size: 15px;
+  .home-trie {
+    display: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // margin: 15px 30px;
+    text-align: center;
+  }
+  .trie-range {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
 }

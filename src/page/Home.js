@@ -3,18 +3,30 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Rings } from "react-loader-spinner";
+import { useLocation } from "react-router-dom";
+
+import PriceRange from "../components/PriceRange";
 
 // Import images
 import imageHero from "../assets/hero.09bfd0f9.jpg";
 import tag from "../assets/tear.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Home = ({ data, setData, searchBar, setSearchBar }) => {
+const Home = ({
+  data,
+  setData,
+  searchBar,
+  setSearchBar,
+  setFetchRangeValues,
+  sortPrice,
+  setSortPrice,
+}) => {
   const [isLoading, setIsLoading] = useState(true);
   // const [sort, setSort] = useState(false);
   // const [rangeValues, setRangeValues] = useState([0, 10000]);
-
   const [page, setPage] = useState(1);
+
+  const location = useLocation();
 
   useEffect(() => {
     try {
@@ -71,7 +83,33 @@ const Home = ({ data, setData, searchBar, setSearchBar }) => {
             setSearchBar(event.target.value);
           }}
         />
-        <FontAwesomeIcon icon="search" className="home-fa-icone" />
+      </div>
+      <div className="home-trie">
+        {location.pathname === "/" ? (
+          <div className="home-trie">
+            <div className="trie-range">
+              <span
+                style={{ marginLeft: 15, marginRight: 15, fontSize: "12px" }}
+              >
+                Prix entre :
+              </span>
+              <PriceRange setFetchRangeValues={setFetchRangeValues} />
+            </div>
+            <div>
+              <span style={{ marginRight: 15, fontSize: "12px" }}>
+                Trier par prix :
+              </span>
+              <button
+                className="trie-button"
+                onClick={() => {
+                  setSortPrice(!sortPrice);
+                }}
+              >
+                <span>{sortPrice ? "⇣" : "⇡"}</span>
+              </button>
+            </div>
+          </div>
+        ) : null}
       </div>
       {/*  */}
       <div className="bloc-ad">
