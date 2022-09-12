@@ -44,8 +44,8 @@ const Header = ({
             setSearchBar(event.target.value);
           }}
         />
-
         <FontAwesomeIcon icon="search" className="fa-icone" />
+
         {location.pathname === "/" ? (
           <div className="trie">
             <span style={{ marginRight: 15 }}>Trier par prix : </span>

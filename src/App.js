@@ -72,6 +72,10 @@ function App() {
                 setSearchBar={setSearchBar}
                 data={data}
                 setData={setData}
+                setFetchRangeValues={setFetchRangeValues}
+                fetchRangeValues={fetchRangeValues}
+                sortPrice={sortPrice}
+                setSortPrice={setSortPrice}
               />
             }
           />
