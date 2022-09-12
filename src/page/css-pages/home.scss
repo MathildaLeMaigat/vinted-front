@@ -252,25 +252,4 @@
     justify-content: center;
     margin-top: 10px;
   }
-
-  .ads {
-    border: 2px solid purple;
-    display: flex;
-    max-width: 220px;
-    height: 430px;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-
-  .ads:not(:last-child) {
-    margin-right: 0px;
-  }
-
-  .ads img {
-    box-sizing: border-box;
-    /* border: green 2px solid; */
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-  }
 }
