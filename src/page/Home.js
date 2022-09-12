@@ -10,7 +10,6 @@ import PriceRange from "../components/PriceRange";
 // Import images
 import imageHero from "../assets/hero.09bfd0f9.jpg";
 import tag from "../assets/tear.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = ({
   data,
