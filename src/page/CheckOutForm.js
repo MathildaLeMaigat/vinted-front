@@ -23,7 +23,7 @@ const CheckOutForm = ({ productName, totalPrice }) => {
 
       //Envoyer ce stripeToken à l'api Vinted
       const response = await axios.post(
-        "https://vinted-backend-v2.herokuapp.com/payment",
+        "https://lereacteur-vinted-api.herokuapp.com/payment",
         {
           amount: totalPrice,
           title: productName,
