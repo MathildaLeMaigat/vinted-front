@@ -28,14 +28,14 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://lereacteur-vinted-api.herokuapp.com/offers?title=${searchBar}&priceMin=${
+        `https://vinted-backend-v2.herokuapp.com/offers?title=${searchBar}&priceMin=${
           fetchRangeValues[0]
         }&priceMax=${fetchRangeValues[1]}&sort=${
           sortPrice ? "price-desc" : "price-asc"
         }`
       );
       setData(response.data);
-      // console.log(response.data);
+      console.log(response.data);
     };
     fetchData();
   }, [searchBar, fetchRangeValues, sortPrice]);
